@@ -1,3 +1,8 @@
 {
-    "enable" : false
+    "enable" : false,
+    "tabs": [{
+        "id":1001,
+        "content": "default Content"
+    }],
+    "current":1001
 }

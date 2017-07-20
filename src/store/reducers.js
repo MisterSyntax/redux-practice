@@ -6,7 +6,6 @@
 import C from '../constants.js'
 import { combineReducers } from 'redux'
 
-//TODO: Remove/Replace Sample reducer
 export const enable = (state = false, action) => {
     switch (action.type) {
         case C.ENABLE: {
@@ -15,12 +14,43 @@ export const enable = (state = false, action) => {
         case C.DISABLE: {
             return false
         }
-        default:{
+        default: {
+            return state
+        }
+    }
+}
+
+export const tabs = (state = [], action) => {
+    switch (action.type) {
+        case C.ADD_TAB: {
+            return [...state, action.payload]
+        }
+        case C.REMOVE_TAB: {
+            return state.filter((curr) => curr.id !== action.payload
+            )
+        }
+        case C.UPDATE_TAB: {
+            return state.map((curr) => (curr.id === action.payload.id) ? { id: curr.id, content: action.payload.content } : curr)
+        }
+        default: {
+            return state
+        }
+    }
+}
+
+export const current = (state = 0, action) => {
+    switch (action.type) {
+        case C.SELECT_TAB: {
+            return action.payload
+        }
+        default: {
             return state
         }
     }
 }
 
 export default combineReducers({
-    enable
+    enable,
+    tabs,
+    current
 })

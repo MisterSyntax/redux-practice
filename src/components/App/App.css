@@ -6,3 +6,7 @@ body{
     color: var(--primary-color);
     font-family: "Helvetica";
 }
+
+.closed{
+    display:none;
+}

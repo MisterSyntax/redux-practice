@@ -19,3 +19,32 @@ export const disableContent = () => {
         type: C.DISABLE
     }
 }
+
+export const addTab = () => {
+    let id = new Date().getTime()
+    return {
+        type: C.ADD_TAB,
+        payload: {id,content:""}
+    }
+}
+
+export const removeTab = (id) => {
+    return {
+        type: C.REMOVE_TAB,
+        payload: id
+    }
+}
+
+export const updateTab = (content) => {
+    return {
+        type: C.UPDATE_TAB,
+        payload: id
+    }
+}
+
+export const selectTab = (id) => {
+    return {
+        type: C.SELECT_TAB,
+        payload: id
+    }
+}

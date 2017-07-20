@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 
-import Home from '../../containers/Home/'
+import Home from '../Home/'
 
 export default class App extends React.Component {
 

@@ -1,0 +1,9 @@
+#tab-bar{
+    width: 20%;
+    background-color: green;
+    height: 100%;
+
+}
+.selected{
+    background-color: red;
+}

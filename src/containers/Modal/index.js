@@ -5,7 +5,7 @@
 import React from 'react'
 
 //import your component
-import Home from '../../components/Home/'
+import Modal from '../../components/Modal/'
 
 import { connect } from 'react-redux'
 
@@ -33,4 +33,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Modal)

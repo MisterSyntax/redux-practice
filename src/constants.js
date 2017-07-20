@@ -5,7 +5,11 @@
 
 const constants = {
     ENABLE: 'ENABLE',
-    DISABLE: 'DISABLE'
+    DISABLE: 'DISABLE',
+    SELECT_TAB: 'SELECT_TAB',
+    ADD_TAB: 'ADD_TAB',
+    REMOVE_TAB: 'REMOVE_TAB',
+    UPDATE_TAB: 'UPDATE_TAB'
 }
 
 export default constants;
