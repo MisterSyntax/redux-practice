@@ -5,33 +5,28 @@
 import React from 'react'
 
 //import your component
-import Modal from '../../components/Modal/'
+import Content from '../../components/Content/'
 
 import { connect } from 'react-redux'
 
 //import whatever action you need to update your state
-import { enableContent, disableContent } from '../../actions'
+import { updateTab } from '../../actions'
 
 const mapStateToProps = (state, props) => (
     {
-        enable: state.enable,
+        current: state.current,
         tabs: state.tabs
     }
 )
 
 const mapDispatchToProps = dispatch => {
     return{
-        onEnableContent(){
+        onUpdateTab(tab){
             dispatch(
-                enableContent()
-            )
-        },
-        onDisableContent(){
-            dispatch(
-                disableContent()
+                updateTab(tab)
             )
         }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Modal)
+export default connect(mapStateToProps, mapDispatchToProps)(Content)

@@ -38,10 +38,13 @@ export const tabs = (state = [], action) => {
     }
 }
 
-export const current = (state = 0, action) => {
+export const current = (state = [], action) => {
     switch (action.type) {
         case C.SELECT_TAB: {
             return action.payload
+        }
+        case C.GET_TAB_TEXT: {
+            return state.filter
         }
         default: {
             return state

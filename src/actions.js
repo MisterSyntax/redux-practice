@@ -24,7 +24,7 @@ export const addTab = () => {
     let id = new Date().getTime()
     return {
         type: C.ADD_TAB,
-        payload: {id,content:""}
+        payload: {id,content:"Change Me"}
     }
 }
 
@@ -35,10 +35,10 @@ export const removeTab = (id) => {
     }
 }
 
-export const updateTab = (content) => {
+export const updateTab = (tab) => {
     return {
         type: C.UPDATE_TAB,
-        payload: id
+        payload: tab
     }
 }
 

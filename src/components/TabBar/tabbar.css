@@ -1,9 +1,54 @@
+@import url('../../cssGlobals/colors.css');
 #tab-bar{
     width: 20%;
-    background-color: green;
     height: 100%;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
 }
-.selected{
-    background-color: red;
+.tab{
+    padding: .2em;
+    cursor: pointer;
+    background-color: var(--bg);
+    border-bottom: 2px solid var(--primary);
+    display: flex;
+    &.selected{
+        background-color: var(--secondary);
+        color: var(--bg);
+        font-weight: 600;
+    }
+    &:hover{
+        background-color: var(--secondary-light);
+    }
+} 
+
+.tab-name{
+    width:80%;
+    overflow: hidden;
+    
+}
+.tab-delete{
+    text-align: right;
+    width:20%;
+    &:hover{
+        color: var(--secondary-dark);
+    }
+}
+.tab-scroll-box{
+    height: 90%;
+}
+
+.tab-add-button{
+    cursor: pointer;
+    padding: .5em 0;
+    color: var(--bg);
+    background-color: var(--secondary);
+    text-align: center;
+    font-weight: 700;
+    border-radius: 3px;
+
+    &:hover{
+        background-color: var(--secondary-light);
+    }
 }

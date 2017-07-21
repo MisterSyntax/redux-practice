@@ -3,10 +3,22 @@
 
 /**use global variables like below**/
 body{
-    color: var(--primary-color);
+    color: var(--font);
     font-family: "Helvetica";
+    font-weight: 600;
 }
 
-.closed{
-    display:none;
+
+.button{
+    cursor: pointer;
+    padding: .5em 0;
+    color: var(--bg);
+    background-color: var(--secondary);
+    text-align: center;
+    font-weight: 700;
+    border-radius: 3px;
+
+    &:hover{
+        background-color: var(--secondary-light);
+    }
 }
